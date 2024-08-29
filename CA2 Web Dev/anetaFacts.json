@@ -1,0 +1,34 @@
+{
+    "anetaFacts": [
+        {
+            "id": 1,
+            "category": "Interests",
+            "context": "I have many interests such as drawing, needle felting, wood working..."
+        },
+        {
+            "id": 2,
+            "category": "Interests",
+            "context": "Recently my interests are focusing on wood working!"
+        },
+        {
+            "id": 3,
+            "category": "About",
+            "context": "I am shy but I will joke with you a lot once I get to know you."
+        },
+        {
+            "id": 4,
+            "category": "About",
+            "context": "I am from Poland but currently I live in Dublin, Ireland. My husband is from America and now we live here together."
+        },
+        {
+            "id": 5,
+            "category": "Food",
+            "context": "My favourite dish changes with time, but currently sushi is my obsession."
+        },
+        {
+            "id": 6,
+            "category": "Interests",
+            "context": "In the future I am planning to try jewellery making using silver clay, and pottery in the far future."
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+<!--
+Written by Aneta Kotas
+For Web Application Developement, CA2
+Year 2024/08/29
+
+Simple main page which includes welcome message and links to other pages
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <style>
+        .nerko-one-regular, header {
+            font-family: "Nerko One", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .nunito-sans, html {
+            font-family: "Nunito Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100,
+                "YTLC" 500;
+        }
+
+        body {
+            min-height: 90vh;
+            text-align: center;
+            position: relative;
+        }
+        
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        main {
+            padding: 20px;
+            background-color: rgb(247, 247, 247);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <%- include('partials/header') %>  
+    </header>
+    
+    <main class="center">
+        <div >
+            <h1 class="nerko-one-regular">Welcome to Aneta's project!</h1>
+            <p class="nunito-sans">On this website you can read about random interesting facts or tell us an interesting fact about yourself!</p>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+</html>
