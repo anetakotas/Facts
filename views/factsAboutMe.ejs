@@ -1,0 +1,85 @@
+<!--
+Written by Aneta Kotas
+For Web Application Developement, CA2
+Year 2024/08/29
+This page uses a json file as a way to store data and displays it using html/ejs
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facts About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <style>
+        .nerko-one-regular, h1, h3, header {
+            font-family: "Nerko One", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .nunito-sans, html {
+            font-family: "Nunito Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100,
+                "YTLC" 500;
+        }
+
+        body {
+            margin: 0 50px;
+        }
+
+        main {
+            max-width: fit-content;
+            background-color: rgb(247, 247, 247);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <%- include('./partials/header') %>
+    </header>
+    
+    <main>
+        <h1>Here are some random facts about Aneta!</h1>
+        <div>
+            <h3>Interests:</h3>
+            <% anetaFacts.anetaFacts.forEach(function(fact) { %>
+                <% if(fact.category == "Interests"){ %>
+                <p>
+                    <%= fact.context %>
+                </p>
+                <% } %>
+            <% }); %>
+
+            <h3>Food:</h3>
+            <% anetaFacts.anetaFacts.forEach(function(fact) { %>
+                <% if(fact.category == "Food"){ %>
+                <p>
+                    <%= fact.context %>
+                </p>
+                <% } %>
+            <% }); %>
+
+            <h3>About Me:</h3>
+            <% anetaFacts.anetaFacts.forEach(function(fact) { %>
+                <% if(fact.category == "About"){ %>
+                <p>
+                    <%= fact.context %>
+                </p>
+                <% } %>
+            <% }); %>
+        </div>
+    </main>
+    
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+</body>
+</html>
